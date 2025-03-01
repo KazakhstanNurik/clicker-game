@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кликер-игра</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Кликер-игра</h1>
+    <p>Вы вошли как: <span id="currentUser"></span></p>
+    <p>Очки: <span id="score">0</span></p>
+    <button id="clickButton">Кликни меня!</button>
+
+    <h2>Рейтинг</h2>
+    <ul id="leaderboard"></ul>
+
+    <h2>Жалобы и предложения</h2>
+    <textarea id="feedbackText" placeholder="Напишите отзыв..."></textarea><br>
+    <button onclick="submitFeedback()">Отправить</button>
+
+    <div id="feedbackList"></div>
+
+    <h2>Настройки</h2>
+    <button onclick="toggleMusic()">🔊 Включить/Выключить музыку</button>
+    <input type="range" id="volumeSlider" min="0" max="1" step="0.1">
+    
+    <h3>Личный фон</h3>
+    <input type="file" id="customBgUpload" accept="image/*">
+    <button onclick="setCustomBackground()">Установить свой фон</button>
+
+    <h3>Личная музыка</h3>
+    <input type="file" id="customMusicUpload" accept="audio/*">
+    <button onclick="setCustomMusic()">Установить свою музыку</button>
+
+    <script src="script.js"></script>
+    <script src="feedback.js"></script>
+    <script src="settings.js"></script>
+</body>
+</html>

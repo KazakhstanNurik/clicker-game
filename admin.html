@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ-панель</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Админ-панель</h1>
+
+    <nav>
+        <button onclick="showTab('users')">Управление пользователями</button>
+        <button onclick="showTab('feedback')">Жалобы и предложения</button>
+        <button onclick="showTab('settings')">Фон и музыка</button>
+    </nav>
+
+    <!-- Вкладка управления пользователями -->
+    <div id="users" class="tab">
+        <h2>Пользователи</h2>
+        <ul id="userList"></ul>
+    </div>
+
+    <!-- Вкладка с жалобами -->
+    <div id="feedback" class="tab hidden">
+        <h2>Жалобы и предложения</h2>
+        <div id="adminFeedbackList"></div>
+    </div>
+
+    <!-- Вкладка фон и музыка -->
+    <div id="settings" class="tab hidden">
+        <h2>Настройки фона и музыки</h2>
+
+        <h3>Фон</h3>
+        <input type="file" id="bgUpload" accept="image/*">
+        <button onclick="setGlobalBackground()">Установить фон</button>
+
+        <h3>Музыка</h3>
+        <input type="file" id="musicUpload" accept="audio/*">
+        <button onclick="setGlobalMusic()">Установить музыку</button>
+        <button onclick="removeGlobalMusic()">Удалить музыку</button>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

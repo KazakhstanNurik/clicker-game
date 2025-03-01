@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход в игру</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Добро пожаловать!</h1>
+
+    <div id="authSection">
+        <h2>Регистрация</h2>
+        <input type="text" id="registerUsername" placeholder="Введите ник"><br>
+        <input type="password" id="registerPassword" placeholder="Введите пароль (мин. 5 символов)"><br>
+        <button onclick="register()">Зарегистрироваться</button>
+
+        <h2>Вход</h2>
+        <input type="text" id="loginUsername" placeholder="Логин"><br>
+        <input type="password" id="loginPassword" placeholder="Пароль"><br>
+        <button onclick="login()">Войти</button>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>
